@@ -1,4 +1,5 @@
 #!/usr/bin/python3
 file = open("text", "r")
-print(file.read())
+for line in file:
+    print(line, end="")
 file.close()
