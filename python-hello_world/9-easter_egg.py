@@ -1,4 +1,5 @@
 #!/usr/bin/python3
-file = open("text", "r")
-for line in file: print(line, end="")
-file.close()
+f = open("text", "r")
+for i in f:
+    print(i, end="")
+f.close()
