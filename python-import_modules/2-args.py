@@ -7,6 +7,8 @@ def main():
     lst = sys.argv[1:]
     if len(lst) == 1:
         print("{} argument:".format(len(lst)))
+    elif len(lst) == 0:
+        print("{} arguments.".format(len(lst)))
     else:
         print("{} arguments:".format(len(lst)))
     for i in range(0, len(lst)):
