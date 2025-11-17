@@ -6,6 +6,6 @@ add = __import__('add_0').add
 
 a = 1
 b = 2
-c = add(a, b)
 
-print(f"{a} + {b} = {c}")
+if __name__ == "__main__":
+    print("{} + {} = {}".format(a, b, add(a, b)))
