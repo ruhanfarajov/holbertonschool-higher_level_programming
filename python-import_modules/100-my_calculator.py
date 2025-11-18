@@ -5,7 +5,7 @@ from calculator_1 import add, sub, div, mul
 
 
 def calc(a, op, b):
-    result = 0
+    result = 1
     if op == "+":
         result = add(a, b)
     elif op == "-":
