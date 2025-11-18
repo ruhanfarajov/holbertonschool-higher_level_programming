@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-import sys
+from sys import argv
 from calculator_1 import add, sub, div, mul
 
 
@@ -28,7 +28,7 @@ def main(lst):
         print("{} {} {} = {}".format(lst[0],  lst[1],  lst[2], answer))
 
 
-lst = sys.argv[1:]
+lst = argv[1:]
 
 if __name__ == "__main__":
     main(lst)
