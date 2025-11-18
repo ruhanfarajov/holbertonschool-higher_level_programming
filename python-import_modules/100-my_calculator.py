@@ -21,8 +21,10 @@ def main(lst):
     operands = ["+", "-", "*", "/"]
     if len(lst) != 3:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
+        print("1")
     elif lst[1] not in operands:
         print("Unknown operator. Available operators: +, -, * and /")
+        print(1)
     else:
         answer = calc(int(lst[0]),  lst[1], int(lst[2]))
         print("{} {} {} = {}".format(lst[0],  lst[1],  lst[2], answer))
