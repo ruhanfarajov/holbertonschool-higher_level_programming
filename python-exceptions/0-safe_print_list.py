@@ -1,14 +1,16 @@
 #!/usr/bin/python3
 
 def safe_print_list(my_list=[], x=0):
-    nb_print = ""
     try:
-        count  = 1
+        nb_print = 1
+        s = ''
         for i in my_list:
-            if count > x: 
+            if nb_print > x: 
                 break
-            nb_print += str(i)
-            count += 1
+            s += str(i)
+            nb_print += 1
+        print(s)
+
     except Exception as e:
         print("{}".format(e))
     return int(nb_print)
