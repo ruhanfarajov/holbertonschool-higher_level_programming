@@ -2,7 +2,7 @@
 
 def safe_print_list(my_list=[], x=0):
     try:
-        nb_print = 1
+        nb_print = 0
         s = ''
         for i in my_list:
             if nb_print > x: 
@@ -13,4 +13,4 @@ def safe_print_list(my_list=[], x=0):
 
     except Exception as e:
         print("{}".format(e))
-    return int(nb_print)
+    return nb_print
