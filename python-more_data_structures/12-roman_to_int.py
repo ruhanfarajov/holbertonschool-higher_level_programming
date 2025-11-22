@@ -1,21 +1,30 @@
 #!/usr/bin/python3
 
 def roman_to_int(roman_string):
-    lst = ['I', 'IV', 'V', 'IX', 'X', 'L', 'C', 'D', 'M']
-    lst2 = [1, 4, 5, 9, 10, 50, 100, 500, 1000]
+    if not isinstance(roman_string, str) or roman_string is None:
+        return 0
+
+    roman_string = roman_string.upper()
+
+    roman_vals = {
+        'I': 1,
+        'V': 5,
+        'X': 10,
+        'L': 50,
+        'C': 100,
+        'D': 500,
+        'M': 1000
+    }
+
     total = 0
-    if not isinstance(roman_string, str):
-        return total
-    i = 0
-    while i < len(roman_string):
-        if roman_string[i] not in lst:
-            return 0
-        for j in range(0, len(lst)):
-            if roman_string[i:i+2] == lst[j]:
-                total += lst2[j]
-                i += 2
-                break
-            elif roman_string[i] == lst[j]:
-                total += lst2[j]
-                i += 1
+    prev_value = 0
+
+    for ch in reversed(roman_string):
+        value = roman_vals.get(ch, 0)
+        if value < prev_value:
+            total -= value
+        else:
+            total += value
+        prev_value = value
+
     return total
