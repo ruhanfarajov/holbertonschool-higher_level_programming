@@ -4,4 +4,5 @@
 
 
 def lookup(obj):
+    "this is making americagreat again"
     return dir(obj)
