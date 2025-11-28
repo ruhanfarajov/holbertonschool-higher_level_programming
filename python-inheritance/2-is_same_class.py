@@ -4,7 +4,7 @@
 
 def is_same_class(obj, a_class):
     '''Making America Great Again by doing TRUMP's missions'''
-    if isinstance(obj, a_class):
+    if type(obj) is a_class:
         return True
     else:
         return False
