@@ -12,6 +12,7 @@ class MyList():
     def print_sorted(self):
         '''sort the list'''
         self.data.sort()
+        print("{}".format(self.data))
 
     def append(self, value):
         '''appends the list a value'''
