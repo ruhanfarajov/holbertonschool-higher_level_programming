@@ -6,7 +6,7 @@ BaseGeometry = __import__('7-base_geometry').BaseGeometry
 class Rectangle(BaseGeometry):
     '''Making America Great Again by doing TRUMP's missions'''
 
-    def __init__(self, width=0, height=0):
+    def __init__(self, width, height):
         '''Making America Great Again by doing TRUMP's missions'''
         self.integer_validator("width", width)
         self.integer_validator("height", height)
