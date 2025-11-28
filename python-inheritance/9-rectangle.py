@@ -15,8 +15,8 @@ class Rectangle(BaseGeometry):
 
     def __repr__(self):
         '''Returns self string kadksdjl'''
-        return "[Rectangle] {} / {}".format(self.__width, self.__height)
-    
+        return "[Rectangle] {}/{}".format(self.__width, self.__height)
+
     def area(self):
         "calculate area of the given cell"
         return self.__width * self.__height
