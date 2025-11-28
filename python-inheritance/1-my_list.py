@@ -1,16 +1,16 @@
 #!/usr/bin/python3
-'''Making America Great Again'''
+"""Module that defines MyList class which can print itself sorted."""
 
 
 class MyList():
-    '''I am not working'''
+    """Class that extends list with ability to print sorted version."""
 
     def __init__(self, data=[]):
-        '''initialize the variable'''
+        """Prints the list in ascending sorted order."""
         self.data = list(data)
 
     def print_sorted(self):
-        '''sort the list'''
+        """Prints the list in ascending sorted order."""
         print("{}".format(sorted(self.data)))
 
     def append(self, value):
