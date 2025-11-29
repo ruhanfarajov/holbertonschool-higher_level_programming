@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 '''
 SALAM THIS MODULE CAN BE DOCUMENTD AS SCRIPT
-
 '''
 
 
@@ -10,12 +9,9 @@ class Student():
 
     def __init__(self, first_name, last_name, age):
         '''initializing variables here'''
-        try:
-            self.first_name = first_name
-            self.last_name = last_name
-            self.age = age
-    except Exception as e:
-        print("{}".format(e))
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
 
     def to_json(self):
         '''
