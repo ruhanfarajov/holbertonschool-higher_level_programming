@@ -17,8 +17,8 @@ class Student():
         '''
         this just return json formatted data
         '''
-        dict_ ={}
-        if my_list == None:
+        dict_ = {}
+        if my_list is None:
             return self.__dict__
         elif len(my_list) == 0:
             return dict_
