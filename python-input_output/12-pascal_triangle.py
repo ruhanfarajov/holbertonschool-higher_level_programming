@@ -1,4 +1,4 @@
-#!/sur/bin/python3
+#!/usr/bin/python3
 '''This is intended to create pascal triangle'''
 
 
