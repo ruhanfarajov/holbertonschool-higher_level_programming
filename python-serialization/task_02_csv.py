@@ -14,7 +14,7 @@ def convert_csv_to_json(filename):
             for row in reader:
                 data.append(row)
 
-        with open(data.json, 'w', encoding='utf-8') as file:
+        with open('data.json', 'w', encoding='utf-8') as file:
             file.write(json.dumps(data))
 
         return True
