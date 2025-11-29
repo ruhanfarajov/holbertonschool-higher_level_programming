@@ -3,5 +3,6 @@
 
 
 def read_file(filename=""):
+    '''This function is imported to print the file'''
     with open(filename, 'r', encoding='utf-8') as file:
         print(file.read())
