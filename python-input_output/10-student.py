@@ -19,7 +19,7 @@ class Student():
         '''
         dict_ ={}
         if my_list == None:
-            return self.__dict.__
+            return self.__dict__
         elif len(my_list) == 0:
             return dict_
         for i in my_list:
