@@ -13,14 +13,15 @@ class Student():
         self.last_name = last_name
         self.age = age
 
-    def to_json(self, my_list=[]):
+    def to_json(self, my_list=None):
         '''
         this just return json formatted data
         '''
-        if len(my_list) == 0:
+        dict_ ={}
+        if my_list == None:
+            return dict_
+        elif len(my_list) == 0:
             return self.__dict__
-
-        dict_ = {}
         for i in my_list:
             for j in self.__dict__:
                 if i == j:
