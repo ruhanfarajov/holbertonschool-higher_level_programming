@@ -2,7 +2,7 @@
 '"This is writing the file'''
 
 
-def write_file(filename='', text=''):
+def append_write(filename='', text=''):
     '''This is wiriting thw text to the file and returns the count'''
 
     with open(filename, 'a', encoding='utf-8') as file:
