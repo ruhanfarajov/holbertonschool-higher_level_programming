@@ -1,5 +1,6 @@
 #!/usr/bi/python3
 '''Let's learn how to pickle vaooo'''
+import pickle
 
 
 class CustomObject():
