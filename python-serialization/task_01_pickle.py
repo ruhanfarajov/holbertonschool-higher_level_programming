@@ -19,12 +19,12 @@ class CustomObject():
 
     def serialize(self, filename):
         ''' Using pickle to serialize the item'''
-        with open(filename, 'w', encoding='utf-8') as file:
-            file.write(F.pickle.dump(self.__dict__))
+        with open(filename, 'wb', encoding='utf-8') as file:
+            pickle.dump(self, file)
 
     @classmethod
     def deserialize(cls, filename):
         '''This is deserializing the element'''
 
-        with open(filename, 'r', encoding='utf-8') as file:
-            return pickle.load(file.read())
+        with open(filename, 'rb', encoding='utf-8') as file:
+            return pickle.load(file)
