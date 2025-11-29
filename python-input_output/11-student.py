@@ -32,4 +32,4 @@ class Student():
         for key in self.__dict__:
             for key2 in json:
                 if key == key2:
-                    self[key] = json[key]
+                    self.__dict__[key] = json[key]
