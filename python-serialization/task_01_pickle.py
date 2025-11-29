@@ -10,36 +10,6 @@ class CustomObject():
         self.__age = age
         self.__is_student = is_student
 
-    @property
-    def name(self):
-        return self.__name
-
-    @name.setter
-    def name(self, value):
-        if not isinstance(value, str):
-            raise TypeError('name should be a string!')
-        self.__name = value
-
-    @property
-    def age(self):
-        return self.__age
-
-    @age.setter
-    def age(self, value):
-        if not isinstance(value, int):
-            raise TypeError("age should be an integer!")
-        self.__age = value
-
-    @property
-    def is_student(self):
-        return self.__is_student
-
-    @is_student.setter
-    def is_student(self, value):
-        if not isinstance(value, bool):
-            raise TypeError("is_student should be boolean")
-        self.__is_student = value
-
     def display(self):
         '''this is just printing out everything'''
         print("Name: {}".format(self.__name))
