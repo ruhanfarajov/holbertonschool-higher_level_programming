@@ -1,25 +1,26 @@
 #!/usr/bin/python3
 """
-Script that adds all command-line arguments to a JSON list file.
+Module that can be defined as script
 """
-
-
+import json
 import sys
+load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
-load_from_json_file = __import__('6-loadd-from_json_file').load_from_json_file
 
 
-def add_item():
-    '''This is adding items to the list of jsj'''
-    filename = 'add_item.js'
-    if Path(filename).exists():
-        items = load_from_json_file(filename)
-    else:
-        items = []
+def main():
+    try:
+        existing_data = load_from_json_file("add_item.json")
+    except FileNotFoundError:
+        existing_data = []
 
-    items.extend(sys.argv[1:])
-    save_to_json_file(items, filename)
+    for i in range(1, len(sys.argv)):
+        existing_data.append(sys.argv[i])
+
+    save_to_json_file(existing_data, "add_item.json")
+
+    return load_from_json_file("add_item.json")
 
 
-if __name__ = "__main__":
-    add_item()
+if __name__ == "__main__":
+    main()
