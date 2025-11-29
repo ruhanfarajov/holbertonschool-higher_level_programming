@@ -1,10 +1,9 @@
 #!/usr/bin/python3
-'''This Module is documenting the pythpn script and says salam'''
-
-
 import sys
 save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
 load_from_json_file = __import__('6-loadd-from_json_file').load_from_json_file
+
+'''this is doing america great again by helping the mission'''
 
 
 def add_item():
