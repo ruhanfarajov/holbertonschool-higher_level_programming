@@ -13,7 +13,7 @@ class Student():
         self.last_name = last_name
         self.age = age
 
-    def to_json(self, my_list=[]):
+    def to_json(self, my_list):
         '''
         this just return json formatted data
         '''
