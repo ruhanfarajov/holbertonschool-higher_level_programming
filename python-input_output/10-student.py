@@ -19,9 +19,9 @@ class Student():
         '''
         dict_ ={}
         if my_list == None:
-            return dict_
+            return self.__dict.__
         elif len(my_list) == 0:
-            return self.__dict__
+            return dict_
         for i in my_list:
             for j in self.__dict__:
                 if i == j:
