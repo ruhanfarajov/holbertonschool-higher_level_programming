@@ -5,5 +5,7 @@ SELECT
 	COUNT(score) AS count_of_people
 FROM
 	second_table
+GROUP BY
+	score
 HAVING
 	COUNT(score) > 1
