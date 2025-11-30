@@ -1,6 +1,7 @@
 -- this script is my first filter in SQL
 SELECT 
-	cities.*
+	cities.id,
+	cities.name
 FROM 
 	cities,
 	states
