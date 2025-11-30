@@ -7,5 +7,3 @@ FROM
 	second_table
 GROUP BY
 	score
-HAVING
-	COUNT(score) > 1
