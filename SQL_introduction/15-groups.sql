@@ -2,7 +2,7 @@
 
 SELECT
 	score,
-	COUNT(score) AS count_of_people
+	COUNT(score) AS number
 FROM
 	second_table
 GROUP BY
