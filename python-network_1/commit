@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#this is commiting to github
+
+read -p "Your commit message" message
+
+#add all files to git commit list
+git add .
+
+
+#commits the list created
+git commit -m "$message"
+
+#pushes the updates
+git push origin main
