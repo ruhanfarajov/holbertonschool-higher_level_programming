@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 #this is commiting to github
 
-read -p "Your commit message" message
+read -p "Your commit message: " message
+
 
 #add all files to git commit list
 git add .
