@@ -23,8 +23,8 @@ def main():
 
     # Print result in required format
     print("Body response:")
-    print("    - type: {}".format(type(body)))
-    print("    - content: {}".format(body))
+    print(" - type: {}".format(type(body)))
+    print(" - content: {}".format(body))
     try:
         text = body.decode('utf-8')
     except Exception:
