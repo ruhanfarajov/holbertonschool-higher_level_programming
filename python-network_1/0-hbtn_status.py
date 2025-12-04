@@ -23,13 +23,13 @@ def main():
 
     # Print result in required format
     print("Body response:")
-    print(" - type: {}".format(type(body)))
-    print(" - content: {}".format(body))
+    print("\t- type: {}".format(type(body)))
+    print("\t- content: {}".format(body))
     try:
         text = body.decode('utf-8')
     except Exception:
         text = body.decode('utf-8', errors='replace')
-    print(" - utf8 content: {}".format(text))
+    print("\t- utf8 content: {}".format(text))
 
 if __name__ == "__main__":
     main()
