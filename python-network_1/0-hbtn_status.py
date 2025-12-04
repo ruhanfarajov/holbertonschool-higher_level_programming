@@ -29,7 +29,7 @@ def main():
         text = body.decode('utf-8')
     except Exception:
         text = body.decode('utf-8', errors='replace')
-    print("    - utf8 content: {}".format(text))
+    print(" - utf8 content: {}".format(text))
 
 if __name__ == "__main__":
     main()
