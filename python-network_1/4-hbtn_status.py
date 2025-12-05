@@ -9,8 +9,8 @@ def fetch(url):
     html = requests.get(url)
     body = html.text
     print("Body response:")
-    print("\t-type: {}".format(type(body)))
-    print("\t-body: {}".format(body))
+    print("\t- type: {}".format(type(body)))
+    print("\t- content: {}".format(body))
 
 
 if __name__ == "__main__":
