@@ -11,9 +11,10 @@ def fetch(url, email):
     payload = {'email': email}
     headers_ = {'cfclearance': 'true'}
 
-    response = requests.post(url,data=payload, headers=headers_)
+    response = requests.post(url, data=payload, headers=headers_)
     body = response.text
     print(body)
+
 
 if __name__ == "__main__":
     lst = sys.argv
