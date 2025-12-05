@@ -8,7 +8,8 @@ import sys
 
 
 def fetch(url):
-    html = requests.get(url)
+    custom = {'cfclearance': 'true'}
+    html = requests.get(url, headers=custom)
     body = html.headers
     print(body)
 
