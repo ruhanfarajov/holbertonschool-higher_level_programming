@@ -5,6 +5,7 @@ I am doing well
 
 import requests
 
+
 def fetch(url):
     html = requests.get(url)
     body = html.text
