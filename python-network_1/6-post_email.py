@@ -12,7 +12,7 @@ def fetch(url, email):
     headers_ = {'cfclearance': 'true'}
 
     response = requests.post(url,data=payload, headers=headers_)
-    body = requests.txt
+    body = response.text
     print(body)
 
 if __name__ == "__main__":
