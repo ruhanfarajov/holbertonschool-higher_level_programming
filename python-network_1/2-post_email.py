@@ -10,7 +10,8 @@ import sys
 def post(url, email):
     data = {"email": email}
     encoded = urllib.parse.urlencode(data).encode('utf-8')
-    req = urllib.request.Request(url,data)
+    req = urllib.request.Request(url,encoded)
+    req.add_header('cfclearance', 'true')
 
     with urllib.request.urlopen(req) as response:
         body = response.read()
