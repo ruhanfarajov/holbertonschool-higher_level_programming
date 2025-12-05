@@ -24,7 +24,7 @@ if __name__ == "__main__":
         error_code(lst[1])
     except urllib.error.HTTPError as e:
         if hasattr(e, 'code'):
-            print("Error code:{}".format(e.code))
+            print("Error code: {}".format(e.code))
         elif hasattr(e, 'reason'):
             print("Error reason: {}".format(e.reason))
     except Exception as e:
