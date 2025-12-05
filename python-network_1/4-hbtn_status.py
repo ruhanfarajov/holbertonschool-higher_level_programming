@@ -3,15 +3,14 @@
 I am doing well
 '''
 
-import urllib.request
+import requests
 
 def fetch(url):
-    with urllib.request.urlopen(url) as response:
-        html = response.read()
-        body = html.decode('utf-8')
-        print("Body response:")
-        print("\t-type: {}".format(type(body)))
-        print("\t-body: {}".format(body))
+    html = requests.get(url)
+    body = html.text
+    print("Body response:")
+    print("\t-type: {}".format(type(body)))
+    print("\t-body: {}".format(body))
 
 
 if __name__ == "__main__":
