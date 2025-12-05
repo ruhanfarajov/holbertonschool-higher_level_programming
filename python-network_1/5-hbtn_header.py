@@ -11,7 +11,8 @@ def fetch(url):
     custom = {'cfclearance': 'true'}
     html = requests.get(url, headers=custom)
     body = html.headers
-    print(body)
+    result = body.get('X-Request-Id')
+    print(result)
 
 
 if __name__ == "__main__":
