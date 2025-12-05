@@ -6,6 +6,7 @@ and displays the response body or an error code if the status is >= 400.
 import requests
 import sys
 
+
 def fetch_and_display(url):
     try:
         response = requests.get(url)
