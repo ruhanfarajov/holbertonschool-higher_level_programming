@@ -23,11 +23,20 @@ def fetch_and_save_posts():
     response = requests.get(url)
     if response.status_code == 200:
         data = response.json()
-        with open('posts.csv', 'w', newline='') as file:
-            writer = csv.writer(file)
-            writer.writerow(["key", "value"])
-            for key, value in data.items():
-                writer.writerow([key, value])
+        new_list = []
+        for i in data:
+            response ={
+                'id': i.get('id'),
+                'title': i.get('title'),
+                'body': i.get('body')
+            }
+            new_list.append(response)
+        
+        with open('posts.csv', 'w', newline='', encoding='utf-8') as file:
+            for i in new_list:
+                writer = csv.DictWriter(file, fieldnames=['id', 'title','body'])
+                writer.writeheader()
+                writer.writerow(i)
     else:
         print(f"Status Code: {response.status_code}")
-fetch_and_print_posts()
+   
