@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#this is coimmiting ot github
+
+read -p "Your commit message: " message
+
+git add .
+
+git commit -m "$message"
+
+git push origin main
