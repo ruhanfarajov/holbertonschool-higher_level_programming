@@ -9,6 +9,7 @@ import csv
 def fetch_and_print_posts():
     url = "https://jsonplaceholder.typicode.com/todos/1"
     response = requests.get(url)
+    print(response.status_code)
     if response.status_code == 200:
         data = response.json()
         for i in data:
