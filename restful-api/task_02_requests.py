@@ -10,7 +10,7 @@ def fetch_and_print_posts():
     url = "https://jsonplaceholder.typicode.com/todos/1"
     response = requests.get(url)
     if response.status_code == 200:
-        print(response.status_code)
+        print("Status Code: {}".format(response.status_code))
         data = response.json()
         for i in data:
             print(data[i])
