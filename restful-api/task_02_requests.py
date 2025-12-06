@@ -10,10 +10,11 @@ def fetch_and_print_post():
     url = "https://jsonplaceholder.typicode.com/"
     response = requests.get(url)
     status = response.status_code()
-   if status == 200:
-       dict_ = response.json()
-       for i in dict_:
-           print(dict_[i])
+    if status == 200:
+        dict_ = response.json()
+        for i in dict_:
+            print(dict_[i])
+
 
 def fetch_and_save_post():
     url = "https://jsonplaceholder.typicode.com/"
