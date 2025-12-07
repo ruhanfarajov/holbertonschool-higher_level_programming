@@ -52,7 +52,8 @@ class Service(BaseHTTPRequestHandler):
         self.send_response(404)
         self.send_header('Content-type', 'text/plain')
         self.end_headers()
-        self.wfile.write('404 Not Found'.encode())
+        self.wfile.write(bytes('404 Not Found', 'utf-8'))
+        self.wfile.write(bytes(' Endpoint not found', 'utf-8'))
 
     def info(self):
         data = {"version": "1.0", "description": "A simple API built with http.server"}
