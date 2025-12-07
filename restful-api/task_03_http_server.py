@@ -28,10 +28,10 @@ class Service(BaseHTTPRequestHandler):
 
     def main_page(self):
         self.send_response(200)
-        self.send_header('Content-type', 'text/html')
+        self.send_header('Content-type', 'text/plain')
         self.end_headers()
         
-        self.wfile.write(bytes('<body>Hello, this is a simple API!</body>', 'utf-8'))
+        self.wfile.write(bytes('Hello, this is a simple API!', 'utf-8'))
 
     def serve_json_data(self):
         data = {"name": "John", "age": 30, "city": "New York"}
