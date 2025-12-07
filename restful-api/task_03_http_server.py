@@ -49,7 +49,7 @@ class Service(BaseHTTPRequestHandler):
         self.wfile.write(bytes(status_message, 'utf-8'))
 
     def error_handler(self):
-        error_message = f"404 Not Found"
+        error_message = "404 Not Found"
         self.send_response(404)
         self.send_header('Content-type', 'text/plain')
         self.end_headers()
