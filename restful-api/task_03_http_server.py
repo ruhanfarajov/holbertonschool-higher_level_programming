@@ -19,8 +19,28 @@ class Service(BaseHTTPRequestHandler):
             self.serve_json_data()
         elif self.path == "/status":
             self.status_printer()
+        elif self.path == '/':
+            self.main_page()
+        elif self.path == '/info':
+            self.info()
         else:
             self.error_handler()
+
+    def main_page(self):
+        self.send_response(200)
+        self.send_header('Content-type', 'text/html')
+        self.end_headers()
+        self.wfile.write(bytes('<h4>Hello, this is a simple API!</h4>', 'utf-8'))
+
+    def info(self):
+        data = {"version": "1.0", "description": "A simple API built with http.server"}
+        new_data = json.dumps(data)
+        self.send_response(200)
+        self.send_header('Content-type', 'application/json')
+        self.end_headers()
+        self.wfile.write(bytes(new_data,'utf-8'))
+
+
 
     def serve_json_data(self):
         data = {"name": "John", "age": 30, "city": "New York"}
