@@ -34,8 +34,11 @@ def add_user():
         'age': data.get('age'),
         'city': data.get('city')
     }
-    users[user.get('username')] = user
-    return jsonify({'message': 'User added', 'user': user}), 201
+    if user in users:
+        return jsonify({'message': 'error', 'user': 'Username already exists'}), 403
+    else:
+        users[user.get('username')] = user
+        return jsonify({'message': 'User added', 'user': user}), 201
 
 @app.route('/users/<username>')
 def user_name(username):
