@@ -21,8 +21,8 @@ class Service(BaseHTTPRequestHandler):
             self.status_printer()
         elif self.path == '/':
             self.main_page()
-        elif self.path == '/info':
-            self.info()
+        # elif self.path == '/info': # Removed unused endpoint
+        #     self.info()
         else:
             self.error_handler()
 
@@ -30,17 +30,8 @@ class Service(BaseHTTPRequestHandler):
         self.send_response(200)
         self.send_header('Content-type', 'text/html')
         self.end_headers()
-        self.wfile.write(bytes('<h4>Hello, this is a simple API!</h4>', 'utf-8'))
-
-    def info(self):
-        data = {"version": "1.0", "description": "A simple API built with http.server"}
-        new_data = json.dumps(data)
-        self.send_response(200)
-        self.send_header('Content-type', 'application/json')
-        self.end_headers()
-        self.wfile.write(bytes(new_data,'utf-8'))
-
-
+        
+        self.wfile.write(bytes('<h2>Hello, this is a simple API!</h2>', 'utf-8')).
 
     def serve_json_data(self):
         data = {"name": "John", "age": 30, "city": "New York"}
@@ -51,16 +42,16 @@ class Service(BaseHTTPRequestHandler):
         self.wfile.write(bytes(json_data, 'utf-8'))
 
     def status_printer(self):
-        status_message = "<h2>OK</h2>"
+        status_message = "OK" 
         self.send_response(200)
-        self.send_header('Content-type', 'text/html')
+        self.send_header('Content-type', 'text/plain') 
         self.end_headers()
         self.wfile.write(bytes(status_message, 'utf-8'))
 
     def error_handler(self):
-        error_message = f"<h3>Error: The requested resource {self.path} was not found.</h3>"
+        error_message = f"Error: The requested resource {self.path} was not found."
         self.send_response(404)
-        self.send_header('Content-type', 'text/html')
+        self.send_header('Content-type', 'text/plain')
         self.end_headers()
         self.wfile.write(bytes(error_message, 'utf-8'))
 
